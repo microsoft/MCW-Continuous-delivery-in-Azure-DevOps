@@ -46,7 +46,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 ## Abstract and learning objectives 
 
-In this workshop, students will learn how to setup and configure continuous delivery within Azure using a combination of Azure Resource Manager (ARM) templates and Visual Studio Team Services (VSTS). Attendees will do this throughout the use of a new VSTS project, Git repository for source control, and an ARM template for Azure resource deployment and configuration management.
+In this workshop, attendees will learn how to setup and configure continuous delivery within Azure using a combination of Azure Resource Manager (ARM) templates and Visual Studio Team Services (VSTS). Attendees will do this throughout the use of a new VSTS project, Git repository for source control, and an ARM template for Azure resource deployment and configuration management.
 
 Attendees will be better able to build templates to automate cloud infrastructure and reduce error-prone manual processes. In addition,
 
@@ -143,7 +143,7 @@ Tasks to complete
 
 Exit criteria
 
--   You can connect Visual Studio to the Visual Studio Team Services account, clone and view the web app repository from the master branch.
+-   You can connect Visual Studio to the Visual Studio Team Services account, clone and view the web app repository from the master branch
 
 ## Exercise 3: Create Visual Studio Team Services build definition
 
@@ -195,7 +195,7 @@ Exit criteria
 
 Duration: 10 Minutes
 
-In this exercise you will trigger an automated build and release of the web application using the build definition and release pipeline you created in earlier exercises. The release pipeline will deploy to three environments: dev, test, and production.
+In this exercise, you will trigger an automated build and release of the web application using the build definition and release pipeline you created in earlier exercises. The release pipeline will deploy to three environments: dev, test, and production.
 
 Tasks to complete
 
@@ -203,13 +203,13 @@ Tasks to complete
 
 Exit criteria
 
--   You have successfully queued a new build and released it through the three environments: dev, test, and production.
+-   You have successfully queued a new build and released it through the three environments: dev, test, and production
 
 ## Exercise 6: Create a feature branch and submit a pull request
 
 Duration: 20 Minutes
 
-In this exercise you will create a short-lived feature branch, make a small code change, and submit a pull request. You'll then merge the pull request into the master branch which triggers an automated build and release of the application
+In this exercise you will create a short-lived feature branch, make a small code change, and submit a pull request. You'll then merge the pull request into the master branch, which will trigger an automated build and release of the application.
 
 Tasks to complete
 
@@ -225,7 +225,7 @@ Tasks to complete
 
 Exit criteria
 
--   You have successfully created a branch, made a code change, submitted a pull request, approved the pull request, and merged the code.
+-   You have successfully created a branch, made a code change, submitted a pull request, approved the pull request, and merged the code
 
 ## After the hands-on lab 
 
