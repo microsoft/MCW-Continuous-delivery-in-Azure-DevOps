@@ -40,6 +40,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
+
 # Continuous delivery with VSTS and Azure whiteboard design session student guide
 
 ## Abstract and learning objectives 
@@ -190,8 +191,6 @@ Directions: With all participants at your table:
 3.  Determine how you will respond to the customer’s objections. 
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
-
-
 
 ## Step 3: Present the solution
 
