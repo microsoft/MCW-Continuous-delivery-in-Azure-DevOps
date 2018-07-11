@@ -84,7 +84,7 @@ When it moved its existing systems into Microsoft Azure, Tailspin Toys decided t
 
 **Public website and data layer**
 
-Todd Culp is the enterprise architect at Tailspin Toys, and he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team so they can be more agile and adaptive in the marketplace.
+Todd Culp is the enterprise architect at Tailspin Toys; he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team so they can be more agile and adaptive in the marketplace.
 
 The public website is currently deployed as an ASP.NET MVC 4 Web App in an App Service Plan in the S3 tier. The development team is hosting its source control for the system in Visual Studio Team Services using a Git repository with branches set up for multiple environments including "development," "test," and "master." As they get close to a release point, the developers have a manual internal code review and QA process in which they debug the application on each other's machines and run through some use cases to test new and existing features in the application. When the build is ready, they manually deploy updates to the website through Visual Studio or FTP. Todd has been tasked with automating the entire process of testing, building, and deploying to the cloud for both the QA team, so they can fully test new builds in a realistic cloud environment, and for the developers, so they cannot deploy any builds that fail the test suite. The builds for the different environments should not affect each other, and there must be an easy way to promote a tested build to production.
 
@@ -191,7 +191,6 @@ Directions: With all participants at your table:
 3.  Determine how you will respond to the customer’s objections. 
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
-
 
 ## Step 3: Present the solution
 
