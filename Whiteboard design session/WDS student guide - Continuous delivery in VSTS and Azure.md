@@ -40,11 +40,12 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
+
 # Continuous delivery with VSTS and Azure whiteboard design session student guide
 
 ## Abstract and learning objectives 
 
-In this workshop, students will learn how to setup and configure continuous delivery within Azure using a combination of Azure Resource Manager (ARM) Templates and Visual Studio Team Services (VSTS). Students will do this throughout the use of a new VSTS project, Git repository for source control, and an ARM Template for Azure resource deployment and configuration management.
+In this workshop, attendees will learn how to setup and configure continuous delivery within Azure using a combination of Azure Resource Manager (ARM) templates and Visual Studio Team Services (VSTS). Attendees will do this throughout the use of a new VSTS project, Git repository for source control, and an ARM template for Azure resource deployment and configuration management.
 
 Attendees will be better able to build templates to automate cloud infrastructure and reduce error-prone manual processes. In addition,
 
@@ -61,11 +62,15 @@ Attendees will be better able to build templates to automate cloud infrastructur
 **Outcome** 
 
 Analyze your customer’s needs.
+
 Time frame: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
 3.  As a table team, review the following customer case study
+
 
 ### Customer situation
 
@@ -79,7 +84,7 @@ When it moved its existing systems into Microsoft Azure, Tailspin Toys decided t
 
 **Public website and data layer**
 
-Todd Culp is the enterprise architect at Tailspin Toys, and he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team, so they can be more agile and adaptive in the marketplace.
+Todd Culp is the enterprise architect at Tailspin Toys, and he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team so they can be more agile and adaptive in the marketplace.
 
 The public website is currently deployed as an ASP.NET MVC 4 Web App in an App Service Plan in the S3 tier. The development team is hosting its source control for the system in Visual Studio Team Services using a Git repository with branches set up for multiple environments including "development," "test," and "master." As they get close to a release point, the developers have a manual internal code review and QA process in which they debug the application on each other's machines and run through some use cases to test new and existing features in the application. When the build is ready, they manually deploy updates to the website through Visual Studio or FTP. Todd has been tasked with automating the entire process of testing, building, and deploying to the cloud for both the QA team, so they can fully test new builds in a realistic cloud environment, and for the developers, so they cannot deploy any builds that fail the test suite. The builds for the different environments should not affect each other, and there must be an easy way to promote a tested build to production.
 
@@ -95,35 +100,35 @@ Todd wants to improve the turnaround time for fixing these bugs, and he needs be
 
 ### Customer needs 
 
-1.  Be able to automatically and continuously deploy new software builds to the Azure App Service web app.
+1.  Be able to automatically and continuously deploy new software builds to the Azure App Service web app
 
-2.  Ensure that continuously deployed builds to the cloud do not interfere with the production copy of the solution.
+2.  Ensure that continuously deployed builds to the cloud do not interfere with the production copy of the solution
 
-3.  Identify an automated way of deploying to different environments for "development," "test," and "production" so that changes or deployments to one environment do not affect the others.
+3.  Identify an automated way of deploying to different environments for "development," "test," and "production" so that changes or deployments to one environment do not affect the others
 
-4.  Configure the automated builds to first require that a full series of unit tests pass before a deployment is started.
+4.  Configure the automated builds to first require that a full series of unit tests pass before a deployment is started
 
-5.  Providing a search feature and visual dashboard for the application logs so the developers can more quickly resolve help desk tickets.
+5.  Provide a search feature and visual dashboard for the application logs so the developers can quickly resolve help desk tickets.
 
-6.  Enhance the logged data from the front-end website to give the developers a more complete picture of the application's performance and behavior.
+6.  Enhance the logged data from the front-end website to give the developers a more complete picture of the application's performance and behavior
 
-    a.  Browser information such as browser page load time and user activity per page.
+    a.  Browser information such as browser page load time and user activity per page
 
-    b.  Application dependency metrics such as request times and request failures for communication with the database or other services.
+    b.  Application dependency metrics such as request times and request failures for communication with the database or other services
 
-7.  Implement proactive diagnostics to generate automatic alerts for unusual application behavior including aberrant request response time, dependency response time, and page load time. 
+7.  Implement proactive diagnostics to generate automatic alerts for unusual application behavior, including aberrant request response time, dependency response time, and page load time 
 
 ### Customer objections 
 
-1.  "We do not want to be locked in to a specific source control repository. We are evaluating GitHub and Visual Studio Team Services and need to be able to change between them without frustrating rework."
+1.  "We do not want to be locked in to a specific source control repository. We are evaluating GitHub and Visual Studio Team Services and need to be able to change between them without frustrating rework"
 
-2.  "We do not want the developers to be able to make changes to the Azure resources even though they will have access to make source code changes."
+2.  "We do not want the developers to be able to make changes to the Azure resources even though they will have access to make source code changes"
 
 3.  "If developers can deploy directly to the cloud, will that expose us to the same quality problems we had before when untested code was promoted to production?"
 
 4.  "How much of an impact will these process changes have on our development cadence? Will learning this place a new burden on the developers?"
 
-5.  "Our developers are already having a challenge learning how to use Git---will adding a continuous deployment system on top of that slow them down and confuse them even more?" 
+5.  "Our developers are already having a challenge learning how to use GitHub---will adding a continuous deployment system on top of that slow them down and confuse them even more?" 
 
 ### Infographic for common scenarios
 
@@ -139,32 +144,33 @@ Time frame: 60 minutes
 **Business needs**
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
 
+Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 *Continuous Integration and Deployment*
 
 1.  What available system should you use to automate software builds and deployments of the application?
 
-2.  Explain how you can continuously deploy new builds directly to the cloud without interfering with the production site.
+2.  Explain how you can continuously deploy new builds directly to the cloud without interfering with the production site
 
-3.  Document how to integrate unit tests into the continuous delivery process such that when a test fails to pass, the deployment process is flagged and stopped.
+3.  Document how to integrate unit tests into the continuous delivery process so that when a test fails to pass, the deployment process is flagged and stopped
 
 4.  Explain how you can test a new build simultaneously with an existing build, like an A/B test?
 
 5.  Why shouldn't we have multiple long lived branches in source control?
 
-6.  Create a plan on how to switch the source control location from Visual Studio Team Services to GitHub.
+6.  Create a plan on how to switch the source control location from Visual Studio Team Services to GitHub
 
 *Enhance system logging functionality*
 
-1.  Implement a solution that will enable the logs to be searchable and visible in an online dashboard.
+1.  Implement a solution that will enable the logs to be searchable and visible in an online dashboard
 
-2.  Implement a solution to enhance the application logs to provide more useful performance and application behavior details, specifically around browser metrics and application dependencies. Discuss which visualization, or dashboard, options exist for the log results. Existing App Service logs already cover these topics:
+2.  Implement a solution to enhance the application logs to provide more useful performance and application behavior details, specifically around browser metrics and application dependencies. Discuss which visualization, or dashboard, the options that exist for the log results. Existing App Service logs already cover these topics:
 
     1.  **Detailed Error Logging**---detailed error information for HTTP status codes that indicate a failure (status code 400 or greater)
 
@@ -186,6 +192,7 @@ Directions: With all participants at your table:
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
+
 ## Step 3: Present the solution
 
 **Outcome**
@@ -197,20 +204,21 @@ Time frame: 30 minutes
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team 
+7.  Tables switch roles and repeat Steps 2–6
 
 ## Wrap-up 
 
 Time frame: 15 minutes
 
-Have the table attendees reconvene with the larger session group to hear a SME share the following preferred solution.
-
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study. 
+ 
 ## Additional references
 
 |    |            |

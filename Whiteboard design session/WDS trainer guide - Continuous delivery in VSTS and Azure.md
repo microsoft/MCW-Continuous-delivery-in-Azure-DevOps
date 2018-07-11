@@ -144,7 +144,7 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
@@ -164,7 +164,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives 
 
-In this workshop, students will learn how to setup and configure continuous delivery within Azure using a combination of Azure Resource Manager (ARM) Templates and Visual Studio Team Services (VSTS). Students will do this throughout the use of a new VSTS project, Git repository for source control, and an ARM Template for Azure resource deployment and configuration management.
+In this workshop, attendees will learn how to setup and configure continuous delivery within Azure using a combination of Azure Resource Manager (ARM) templates and Visual Studio Team Services (VSTS). Attendees will do this throughout the use of a new VSTS project, Git repository for source control, and an ARM template for Azure resource deployment and configuration management.
 
 Attendees will be better able to build templates to automate cloud infrastructure and reduce error-prone manual processes. In addition,
 
@@ -181,8 +181,11 @@ Attendees will be better able to build templates to automate cloud infrastructur
 **Outcome** 
 
 Analyze your customer’s needs.
+
 Time frame: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
 3.  As a table team, review the following customer case study
@@ -200,7 +203,7 @@ When it moved its existing systems into Microsoft Azure, Tailspin Toys decided t
 
 **Public website and data layer**
 
-Todd Culp is the enterprise architect at Tailspin Toys, and he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team, so they can be more agile and adaptive in the marketplace.
+Todd Culp is the enterprise architect at Tailspin Toys, and he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team so they can be more agile and adaptive in the marketplace.
 
 The public website is currently deployed as an ASP.NET MVC 4 Web App in an App Service Plan in the S3 tier. The development team is hosting its source control for the system in Visual Studio Team Services using a Git repository with branches set up for multiple environments including "development," "test," and "master." As they get close to a release point, the developers have a manual internal code review and QA process in which they debug the application on each other's machines and run through some use cases to test new and existing features in the application. When the build is ready, they manually deploy updates to the website through Visual Studio or FTP. Todd has been tasked with automating the entire process of testing, building, and deploying to the cloud for both the QA team, so they can fully test new builds in a realistic cloud environment, and for the developers, so they cannot deploy any builds that fail the test suite. The builds for the different environments should not affect each other, and there must be an easy way to promote a tested build to production.
 
@@ -216,35 +219,35 @@ Todd wants to improve the turnaround time for fixing these bugs, and he needs be
 
 ### Customer needs 
 
-1.  Be able to automatically and continuously deploy new software builds to the Azure App Service web app.
+1.  Be able to automatically and continuously deploy new software builds to the Azure App Service web app
 
-2.  Ensure that continuously deployed builds to the cloud do not interfere with the production copy of the solution.
+2.  Ensure that continuously deployed builds to the cloud do not interfere with the production copy of the solution
 
-3.  Identify an automated way of deploying to different environments for "development," "test," and "production" so that changes or deployments to one environment do not affect the others.
+3.  Identify an automated way of deploying to different environments for "development," "test," and "production" so that changes or deployments to one environment do not affect the others
 
-4.  Configure the automated builds to first require that a full series of unit tests pass before a deployment is started.
+4.  Configure the automated builds to first require that a full series of unit tests pass before a deployment is started
 
-5.  Providing a search feature and visual dashboard for the application logs so the developers can more quickly resolve help desk tickets.
+5.  Provide a search feature and visual dashboard for the application logs so the developers can quickly resolve help desk tickets.
 
-6.  Enhance the logged data from the front-end website to give the developers a more complete picture of the application's performance and behavior.
+6.  Enhance the logged data from the front-end website to give the developers a more complete picture of the application's performance and behavior
 
-    a.  Browser information such as browser page load time and user activity per page.
+    a.  Browser information such as browser page load time and user activity per page
 
-    b.  Application dependency metrics such as request times and request failures for communication with the database or other services.
+    b.  Application dependency metrics such as request times and request failures for communication with the database or other services
 
-7.  Implement proactive diagnostics to generate automatic alerts for unusual application behavior including aberrant request response time, dependency response time, and page load time. 
+7.  Implement proactive diagnostics to generate automatic alerts for unusual application behavior, including aberrant request response time, dependency response time, and page load time 
 
 ### Customer objections 
 
-1.  "We do not want to be locked in to a specific source control repository. We are evaluating GitHub and Visual Studio Team Services and need to be able to change between them without frustrating rework."
+1.  "We do not want to be locked in to a specific source control repository. We are evaluating GitHub and Visual Studio Team Services and need to be able to change between them without frustrating rework"
 
-2.  "We do not want the developers to be able to make changes to the Azure resources even though they will have access to make source code changes."
+2.  "We do not want the developers to be able to make changes to the Azure resources even though they will have access to make source code changes"
 
 3.  "If developers can deploy directly to the cloud, will that expose us to the same quality problems we had before when untested code was promoted to production?"
 
 4.  "How much of an impact will these process changes have on our development cadence? Will learning this place a new burden on the developers?"
 
-5.  "Our developers are already having a challenge learning how to use Git---will adding a continuous deployment system on top of that slow them down and confuse them even more?" 
+5.  "Our developers are already having a challenge learning how to use GitHub---will adding a continuous deployment system on top of that slow them down and confuse them even more?" 
 
 ### Infographic for common scenarios
 
@@ -260,31 +263,33 @@ Time frame: 60 minutes
 **Business needs**
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
+
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 *Continuous Integration and Deployment*
 
 1.  What available system should you use to automate software builds and deployments of the application?
 
-2.  Explain how you can continuously deploy new builds directly to the cloud without interfering with the production site.
+2.  Explain how you can continuously deploy new builds directly to the cloud without interfering with the production site
 
-3.  Document how to integrate unit tests into the continuous delivery process such that when a test fails to pass, the deployment process is flagged and stopped.
+3.  Document how to integrate unit tests into the continuous delivery process so that when a test fails to pass, the deployment process is flagged and stopped
 
 4.  Explain how you can test a new build simultaneously with an existing build, like an A/B test?
 
 5.  Why shouldn't we have multiple long lived branches in source control?
 
-6.  Create a plan on how to switch the source control location from Visual Studio Team Services to GitHub.
+6.  Create a plan on how to switch the source control location from Visual Studio Team Services to GitHub
 
 *Enhance system logging functionality*
 
-1.  Implement a solution that will enable the logs to be searchable and visible in an online dashboard.
+1.  Implement a solution that will enable the logs to be searchable and visible in an online dashboard
 
-2.  Implement a solution to enhance the application logs to provide more useful performance and application behavior details, specifically around browser metrics and application dependencies. Discuss which visualization, or dashboard, options exist for the log results. Existing App Service logs already cover these topics:
+2.  Implement a solution to enhance the application logs to provide more useful performance and application behavior details, specifically around browser metrics and application dependencies. Discuss which visualization, or dashboard, the options that exist for the log results. Existing App Service logs already cover these topics:
 
     1.  **Detailed Error Logging**---detailed error information for HTTP status codes that indicate a failure (status code 400 or greater)
 
@@ -319,6 +324,7 @@ Time frame: 30 minutes
 **Presentation** 
 
 Directions:
+
 1.  Pair with another table
 2.  One table is the Microsoft team and the other table is the customer
 3.  The Microsoft team presents their proposed solution to the customer
@@ -347,7 +353,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | App service staging environments | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-staged-publishing/> |
 | Application Insights | <https://azure.microsoft.com/en-us/documentation/services/application-insights/> |
 
-# Continuous delivery with VSTS and Azure whiteboard design session trainer guide
+# Continuous delivery in VSTS and Azure whiteboard design session trainer guide
 
 ## Step 1: Review the customer case study
 
@@ -375,19 +381,16 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Determine which table will be paired with your table before Step 3 begins
 
--   For the first round, assign one table as the Microsoft team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer
 
--   Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team 
 
-    -   Have the customer team provide one objection for the Microsoft team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to
 
-    -   The presentation and objections should be no longer than 10-minutes
-
--   Have participants on the customer team give feedback to the Microsoft team
-
-    -   The feedback should be no longer than 5 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes
 
     -   If needed, the trainer may also provide feedback
+
 
 ## Wrap-up
 
@@ -403,7 +406,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Preferred solution
 
-The solution for the Tailspin Toys scenario involved several technologies, including:
+The solution for the Tailspin Toys scenario involves several technologies, including:
 
 -   Creating a local, short lived branch for feature work
 
@@ -434,56 +437,42 @@ The solution for the Tailspin Toys scenario involved several technologies, inclu
 
 1.  What available system should you use to automate software builds and deployments of the application?
 
--   Visual Studio Team Services' build and release management features are a complete end to end solution for automating builds deployment for the solutions. From there, you can customize the gates your solution needs to promote the solution from environment to environment. You're in complete control of how the CI/CD process is implemented.
+Visual Studio Team Services' build and release management features are a complete end to end solution for automating builds deployment for the solutions. From there, you can customize the gates your solution needs to promote the solution from environment to environment. You're in complete control of how the CI/CD process is implemented.
 
--   Once we have the build definition producing build artifacts, we create a release pipeline using the Release Management features of Visual Studio Team Services.
+Once we have the build definition producing build artifacts, we create a release pipeline using the Release Management features of Visual Studio Team Services. The release pipeline is like the build definition in that it is a series to steps or tasks that we put together to produce an outcome. In this case, we produce the deployment of a release to one or more environments and perform some level of validation and verification of each release.We can then configure approval steps between each environment as quality stage gates. This allows us to control the flow of releases as they proceed through the environments. 
 
--   The release pipeline is like the build definition in that it is a series to steps or tasks that we put together to produce an outcome. In this case...we produce the deployment of a release to one or more environments and perform some level of validation and verification of each release.
+The pipeline for development would simply deploy upon a successful build from the build pipeline.Then, before we deploy to test, we may want the QA team to decide when to deploy the release into the environment. If that were the case, we would configure a manual approval and the deployment, although still automated, would not occur until a member of the QA team approved it to be deployed. This is useful when a QA team may be reviewing an existing release (previously deployed) and does not want the current release to be overwritten in their test environment.
 
--   We can then configure approval steps between each environment as quality stage gates. This allows us to control the flow of releases as they proceed through the environments.
-
--   The pipeline for development would simply deploy upon a successful build from the build pipeline.
-
--   Then, before we deploy to test, we may want the QA team to decide when to deploy the release into the environment. If that were the case, we would configure a manual approval and the deployment, although still automated, would not occur until a member of the QA team approved it to be deployed. This is useful when a QA team may be reviewing an existing release (previously deployed) and does not want the current release to be overwritten in their test environment.
-
--   Once the deployment to test occurs, we would likely have additional acceptance tests executed.
-
--   If these acceptance tests pass, we could then trigger the deployment to production.
-
--   It is important to note that each environment can have its own set of tasks as often times, the deployment and validation steps vary by environment.
+Once the deployment to test occurs, we would likely have additional acceptance tests executed. If these acceptance tests pass, we could then trigger the deployment to production. It is important to note that each environment can have its own set of tasks as oftentimes, the deployment and validation steps vary by environment
 
 2.  Explain how you can continuously deploy new builds directly to the cloud without interfering with the production site.
 
--   For a production deployment, the customer wants to maintain the uptime of the application. Thus, when we are deploying a new release, we want the application to remain available.
+For a production deployment, the customer wants to maintain the uptime of the application. Thus, when we are deploying a new release, we want the application to remain available. Azure App Services has a deployment slot feature that specifically enables this scenario. 
 
--   Azure App Services have a deployment slot feature specifically to enable this scenario. Each App Service has, by default, a production deployment slot. This is not to be confused with a production environment. For the purposes of this case study, we could add a new deployment slot named "staging."
-
--   To do this, we add an additional deployment slot to the Azure App Service and configure the release pipeline to deploy to the newly created deployment slot.
-
--   Assuming a successful deployment and verification to the staging slot, we add an additional task to the deployment that switches the staging deployment slot with the production deployment slot and all new requests will be directed to the newly deployed application. All of this is done with no downtime to the application.
+Each App Service has, by default, a production deployment slot. This is not to be confused with a production environment. For the purposes of this case study, we could add a new deployment slot named "staging." To do this, we add an additional deployment slot to the Azure App Service and configure the release pipeline to deploy to the newly created deployment slot. Assuming a successful deployment and verification to the staging slot, we add an additional task to the deployment that switches the staging deployment slot with the production deployment slot and all new requests will be directed to the newly deployed application. All of this is done with no downtime to the application.
 
 3.  Document how to integrate unit tests into the continuous delivery process such that when a test fails to pass, the deployment process is flagged and stopped.
 
--   Let's assume your solution already includes a test project with unit tests. You can create or edit your build definition to include a task (Visual Studio Test task) that runs unit tests. After your build starts, this task automatically runs all the unit tests in your solution. If one or more tests fail, the continuous delivery process will halt for that particular build. You could then also configure the test task to create a new work item when a test fails.
+Let's assume your solution already includes a test project with unit tests. You can create or edit your build definition to include a task (Visual Studio Test task) that runs unit tests. After your build starts, this task automatically runs all the unit tests in your solution. If one or more tests fail, the continuous delivery process will halt for that particular build. You could then also configure the test task to create a new work item when a test fails.
 
 4.  Explain how you can test a new build simultaneously with an existing build, like an A/B test?
 
--   The most common technique to meet this requirement is to create a deployment slots where your App Service variation can be deployed to. Then, configure the release pipeline to deploy to the preferred deployment slot. Using the Azure Portal you can configure the Traffic Routing feature, specifying which percentage of users should go to the primary site and each deployment slot when they browse to your site's URL. Additionally, you could use Application Insights to measure the effectiveness of each version of the site.
+The most common technique to meet this requirement is to create a deployment slots where your App Service variation can be deployed to. Then, configure the release pipeline to deploy to the preferred deployment slot. Using the Azure Portal you can configure the Traffic Routing feature, specifying which percentage of users should go to the primary site and each deployment slot when they browse to your site's URL. Additionally, you could use Application Insights to measure the effectiveness of each version of the site.
 
 5.  Why shouldn't we have multiple long lived branches in source control?
 
--   If you think if your work as delta off of a master...the size of the delta increases as your branch incorporates more and more work. As the size of your team grows, the amount of work hidden from each other increases. And the chances that your assumptions about the state of the code hold true decreases the more you use long lived branches. If you merge your code back to master frequently, you demonstrate the direction you're taking the code. When you merge your code more frequently to master, the pain of integration happens at the beginning instead of the end of your work. This allows you to find issues faster and fix them at the earliest possible moment. Merging your code frequently also results in fewer merge conflicts. If you're developing a large feature, consider using feature flags so that you can continue to merge your code frequently.
+If you think of your work as delta off of a master, the size of the delta increases as your branch incorporates more and more work. As the size of your team grows, the amount of work hidden from each other increases and the chances that your assumptions about the state of the code hold true decreases the more you use long lived branches. If you merge your code back to master frequently, you demonstrate the direction you're taking the code. When you merge your code more frequently to master, the pain of integration happens at the beginning instead of the end of your work. This allows you to find issues faster and fix them at the earliest possible moment. Merging your code frequently also results in fewer merge conflicts. If you're developing a large feature, consider using feature flags so that you can continue to merge your code frequently.
 
 6.  Create a plan on how to switch the source control location from Visual Studio Team Services to GitHub.
 
--   Let's assume you have already uploaded your codebase to GitHub from Visual Studio Team Services. First, start by editing your existing build definition. When you initially configured the build definition, you selected Visual Studio Team Services as the source for your code. You would now change the "Get sources" item to select GitHub. This, in turn, will require you to authenticate to GitHub (if you have not previously done so). Finally, you select the specifics for your Repository and Default branch. The rest of the build and release process remains unchanged.
+Let's assume you have already uploaded your codebase to GitHub from Visual Studio Team Services. First, start by editing your existing build definition. When you initially configured the build definition, you selected Visual Studio Team Services as the source for your code. You would now change the "Get sources" item to select GitHub. This, in turn, will require you to authenticate to GitHub (if you have not previously done so). Finally, you select the specifics for your Repository and Default branch. The rest of the build and release process remains unchanged.
 
 
 *Enhance system logging functionality*
 
 1.  Implement a solution that will enable the logs to be searchable and visible in an online dashboard.
 
--   Application Insights provide rich performance monitoring, alerting, and easy-to-consume dashboards. The service also allows us to quickly see if we have a problem and how many customers may be affected. The service provides for interactive queries and and full-text search for unlocking insights into our logs.
+Application Insights provide rich performance monitoring, alerting, and easy to digest dashboards. The service also allows us to quickly see if we have a problem and how many customers may be affected. The service provides for interactive queries and and full text search for unlocking insights into our logs.
 
     ![Application Insights provides a rich interactive dashboard and search feature over the logs that it collects from the application. In these screenshots, Search is highlighted in the menu, and a Search screen displays information about Trace, Request, Page View, Custom Event, and Exception Event Types, which are selected in a Filter submenu. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-ContinuousdeliverywithVSTSandAzureimages/media/image3.png "Open diagnostic search")
 
@@ -499,15 +488,13 @@ The solution for the Tailspin Toys scenario involved several technologies, inclu
 
     5.  **Deployment Logs**
 
--   The website logs can be easily and significantly enhanced by enabling Application Insights in the project. To do this, you need to get the Application Insights Software Developer Kit SDK from NuGet, and configure it for use within the app. Application Insights is configured in the ApplicationInsights.config file in the solution, and this file should be added to the source control repository.
+The website logs can be easily and significantly enhanced by enabling Application Insights in the project. To do this, you need to get the Application Insights Software Developer Kit SDK from NuGet, and configure it for use within the app. Application Insights is configured in the ApplicationInsights.config file in the solution, and this file should be added to the source control repository.
 
--   After Application Insights has been configured within the application, you need to create an App Insights service instance in the Azure Portal to collect the log data. Do not forget to configure the application with the correct Instrumentation Key and log settings to connect to the App Insights service where it sends its collected data.
+After Application Insights has been configured within the application, you need to create an App Insights service instance in the Azure Portal to collect the log data. Do not forget to configure the application with the correct Instrumentation Key and log settings to connect to the App Insights service where it sends its collected data. By using App Insights now, you need to adapt the App Service deployment slots by creating slot-bound settings for the App Insights Instrumentation Key. That way, staging and production can report independent log analytics even after a swap.
 
--   By using App Insights now, you need to adapt the App Service deployment slots by creating slot-bound settings for the App Insights Instrumentation Key. That way, staging and production can report independent log analytics even after a swap.
+From the Application Insights Portal, we can see detailed metrics from our solution and get a visual layout of the dependency relationships between our application components using App map. Each component displays specific KPIs such as load, performance, failures, and alerts. By clicking on the App Analytics on one of the application components, we can open the Application Insights Analytics feature. This will provide a query language for analyzing all of the data collected by Application Insights.
 
--   From the Application Insights Portal, we can see detailed metrics from our solution and get a visual layout of the dependency relationships between our application components using App map. Each component displays specific KPIs such as load, performance, failures, and alerts. By clicking on the App Analytics on one of the application components, we can open the Application Insights Analytics feature. This will provide a query language for analyzing all of the data collected by Application Insights.
-
--   To get custom information about our users, the Users panel in Application Insights, will allow us to understand important details in a variety of ways. We can use this panel to understand such information as where our users are connecting from, the browser type they are using, and what areas of the application they're accessing.
+To get custom information about our users, the Users panel in Application Insights, will allow us to understand important details in a variety of ways. We can use this panel to understand such information as where our users are connecting from, the browser type they are using, and what areas of the application they're accessing.
 
     ![In these Application Insights screenshots, the Settings icon in the menu is selected, and an arrow points from it to a circled Investigate group (Failures, Exceptions, Browser, Usage, Operational events) in the Settings and Diagnostics pane, and an arrow points from this group to a Server responses pane, which displays various information. Below this, in the main window below Application health, BROWSER PAGE LOAD is circled, and an arrow points from the circle to a Browsers pane, which displays various information. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-ContinuousdeliverywithVSTSandAzureimages/media/image4.png "Major routes to view your telemetry")
 
@@ -538,11 +525,11 @@ The solution for the Tailspin Toys scenario involved several technologies, inclu
 
     CI/CD is a commitment. To achieve velocity with confidence, there is a required rigor in testing that becomes key to success. This will likely result in a learning curve where you must slow down to go fast. It might even be painful at the start, but that pain is ultimately what drives the automation, monitoring, and incident handling efforts.
 
-5.  "Our developers are already having a challenge learning how to use Git---will adding a continuous deployment system on top of that slow them down and confuse them  even more?"
+5.  "Our developers are already having a challenge learning how to use GitHub---will adding a continuous deployment system on top of that slow them down and confuse them  even more?"
     
     **Potential answer**
 
-    There is a learning curve with every quality gate added. Developers will need to do more automated testing locally to ensure code will pass the CI process. Working from master (or trunk) requires that developers really own the state of the build process. When the build is broken, fixing the build becomes the priority. This is another area where we slow down to go faster...with higher quality deliverable.
+    There is a learning curve with every quality gate added. Developers will need to do more automated testing locally to ensure code will pass the CI process. Working from master (or trunk) requires that developers really own the state of the build process. When the build is broken, fixing the build becomes the priority. This is another area where we slow down to go faster for a higher quality deliverable.
 
 ## Customer quote (to be read back to the attendees at the end)
 
