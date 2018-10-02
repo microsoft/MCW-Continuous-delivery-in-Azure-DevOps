@@ -43,5 +43,5 @@ DevOps
 
 ## Related references
 - [MCW](https://github.com/Microsoft/MCW)
-- [DevOps Checklist](https://microsoft.sharepoint.com/sites/infopedia/pages/layouts/kcdoc.aspx?k=g01kc-1-30282)
-- [Reference Architecture for Basic Web Application](https://microsoft.sharepoint.com/sites/infopedia/pages/layouts/kcdoc.aspx?k=g01kc-1-30286)
+- [DevOps Checklist](https://docs.microsoft.com/en-us/azure/architecture/checklist/dev-ops)
+- [Reference Architecture for Basic Web Application](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)
