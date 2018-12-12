@@ -1,7 +1,7 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Continuous delivery in VSTS and Azure
+Continuous delivery in Azure DevOps and Azure
 </div>
 
 <div class="MCWHeader2">
@@ -27,7 +27,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Continuous delivery in VSTS and Azure before the hands-on lab setup guide](#continuous-delivery-in-vsts-and-azure-before-the-hands-on-lab-setup-guide)
+- [Continuous delivery in Azure DevOps and Azure before the hands-on lab setup guide](#continuous-delivery-in-vsts-and-azure-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
         - [Prerequisites](#prerequisites)
@@ -38,7 +38,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# Continuous delivery in VSTS and Azure before the hands-on lab setup guide
+# Continuous delivery in Azure DevOps and Azure before the hands-on lab setup guide
 
 ## Requirements
 
