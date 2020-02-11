@@ -514,12 +514,12 @@ The *pool* section specifies which pool to use for a job of the pipeline. It als
     - task: NuGetCommand@2
       displayName: 'NuGet restore'
       inputs:
-        restoreSolution: 'tailspintoysweb.csproj'
+        restoreSolution: 'tailspintoysweb/tailspintoysweb.csproj'
 
     - task: VSBuild@1
       displayName: 'Build solution'
       inputs:
-        solution: 'tailspintoysweb.csproj'
+        solution: 'tailspintoysweb/tailspintoysweb.csproj'
         msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
         platform: 'any cpu'
         configuration: 'release'
@@ -561,12 +561,12 @@ The *pool* section specifies which pool to use for a job of the pipeline. It als
     - task: NuGetCommand@2
       displayName: 'NuGet restore'
       inputs:
-        restoreSolution: 'tailspintoysweb.csproj'
+        restoreSolution: 'tailspintoysweb/tailspintoysweb.csproj'
 
     - task: VSBuild@1
       displayName: 'Build solution'
       inputs:
-        solution: 'tailspintoysweb.csproj'
+        solution: 'tailspintoysweb/tailspintoysweb.csproj'
         msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
         platform: 'any cpu'
         configuration: 'release'
@@ -598,7 +598,7 @@ The *pool* section specifies which pool to use for a job of the pipeline. It als
 
     ![A screen that shows the real-time output of the build process.](images/stepbystep/media/image76.png "Real-time output")   
 
-15. After the build process completes, you should see a green check mark next to each of the build pipeline steps.
+15. After the build process completes, you should see a green check mark next to each of the build pipeline steps. You should also be able to see and browse the content of the `Artifact` published with the `.zip` file containing your ASP.NET Core app ready to be deployed.
   
     ![A screen that shows a successfully completed build pipeline.](images/stepbystep/media/image77.png "Success") 
     
