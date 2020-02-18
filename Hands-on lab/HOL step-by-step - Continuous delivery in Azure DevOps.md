@@ -216,6 +216,8 @@ Now that the template file has been uploaded, we'll deploy it several times to c
 6.  Next, we're asked to supply an administrator password for the PostgreSQL server and database. This will be the password credential you would need to enter to connect to your newly created database.
 
     Enter a value for the *administratorLoginPassword* and then press **Enter**.
+    
+    > **Note**: The password complexity requirements are as follows. *Minimum length 8 characters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). Your password cannot contain all or part of the login name. Part of a login name is defined as three or more consecutive alphanumeric characters*
 
 7. This will kick off the provisioning process which takes a few minutes to create all the resources for the environment. This is indicated by the "Running" text displayed at the bottom of the Azure Cloud Shell while the command is executing.
 
@@ -258,6 +260,8 @@ The following steps are very similar to what was done in the previous task with 
 
 6. Enter a value for the *administratorLoginPassword* and then press **Enter**.
 
+    > **Note**: The password complexity requirements are as follows. *Minimum length 8 characters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). Your password cannot contain all or part of the login name. Part of a login name is defined as three or more consecutive alphanumeric characters*
+
 7. This will kick off the provisioning process which takes a few minutes to create all the resources for the environment. This is indicated by the *Running* text displayed at the bottom of the Azure Cloud Shell while the command is executing.
 
     ![The Azure Cloud Shell is executing the template based on the parameters we provided.](images/stepbystep/media/image49.png "Azure Cloud Shell")
@@ -296,6 +300,8 @@ The following steps are very similar to what was done in the previous task with 
     ![In the Azure Cloud Shell window, we are prompted for the administrative username for the PostgreSQL server and database we want to create.](images/stepbystep/media/image47.png "Azure Cloud Shell")
 
 6. Enter a value for the *administratorLoginPassword* and then press **Enter**.
+
+    > **Note**: The password complexity requirements are as follows. *Minimum length 8 characters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.). Your password cannot contain all or part of the login name. Part of a login name is defined as three or more consecutive alphanumeric characters*
 
 7. This will kick off the provisioning process which takes a few minutes to create all the resources for the environment. This is indicated by the *Running* text displayed at the bottom of the Azure Cloud Shell while the command is executing.
 
