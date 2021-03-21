@@ -1094,9 +1094,13 @@ In this exercise, you will modify the existing pipeline to include a basic relea
 
     Using **Azure Portal**, navigate to the resource group you created earlier to view your app services in this resource group .   Sort by **Type** Select the development app service:
 
+    **NOTE TO THE DOCUMENT CREATORS: The following image is incorrect. It should highlight the dev app service STAGING environment.**
+    
     ![Screen showing Azure Portal provisioned assets in lab resource group , the dev Web App Service and sorted type column header are highlighted.](images/stepbystep/media/image1023.png "Azure Portal Resources")  
 
     On the App Service Overview, select **Browse**.
+
+    **NOTE TO THE DOCUMENT CREATORS: The following image is incorrect. It should highlight the dev app service STAGING environment.**
 
     ![Screen showing Azure Portal detail view of provisioned development web app service with Browse highlighted.](images/stepbystep/media/image1024.png "Azure Portal - App Service Detail")  
 
