@@ -44,9 +44,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this whiteboard design session, you will learn how to design a solution with a combination of ARM templates, Azure DevOps, and GitHub actions to enable continuous delivery with several Azure PaaS services.
+In this whiteboard design session, you will learn how to design a solution with a combination of Bicep templates, Azure DevOps, and GitHub actions to enable continuous delivery with several Azure PaaS services.
 
-At the end of this workshop, you will be better able to build templates to automate cloud infrastructure and reduce error-prone manual processes. In addition, you'll learn how to design a deployment and monitoring architecture using ARM templates to provision Azure resources, Application Insights for deep application monitoring, and GitHub as a source code repository and build/deploy pipeline.
+At the end of this workshop, you will be better able to build templates to automate cloud infrastructure and reduce error-prone manual processes. In addition, you'll learn how to design a deployment and monitoring architecture using Bicep templates to provision Azure resources, Application Insights for deep application monitoring, and GitHub as a source code repository and build/deploy pipeline.
 
 ## Step 1: Review the customer case study
 
@@ -94,9 +94,9 @@ In the current situation, the conference sites are hosted on-premises with the f
 
 6. Enhance the logged data from the front-end website to give the developers a more complete picture of the application's performance and behavior.
 
-    - Browser information such as browser page load time and user activity per page.
+   - Browser information such as browser page load time and user activity per page.
 
-    - Application dependency metrics such as request times and request failures for communication with the database or other services.
+   - Application dependency metrics such as request times and request failures for communication with the database or other services.
 
 7. Implement proactive diagnostics to generate automatic alerts for unusual application behavior including aberrant request response time, dependency response time, and page load time.
 
@@ -110,7 +110,7 @@ In the current situation, the conference sites are hosted on-premises with the f
 
 4. How much of an impact will these process changes have on our development cadence? Will learning this place a new burden on the developers?
 
-5. Our developers are already having a challenge learning how to use Git; will adding a continuous deployment system on top of that slow them down and confuse them even more?  
+5. Our developers are already having a challenge learning how to use Git; will adding a continuous deployment system on top of that slow them down and confuse them even more?
 
 ### Infographic for common scenarios
 
@@ -136,7 +136,7 @@ Directions: With your team, answer the following questions and be prepared to pr
 
 Directions: With your team, respond to the following questions:
 
-*Continuous Integration and Deployment*
+_Continuous Integration and Deployment_
 
 1. What available system should you use to automate software builds and deployments of the application?
 
@@ -150,21 +150,21 @@ Directions: With your team, respond to the following questions:
 
 6. Create a plan on how to switch the source control location from Azure DevOps to GitHub.
 
-*Enhance system logging functionality*
+_Enhance system logging functionality_
 
 1. Implement a solution that will enable the logs to be searchable and visible in an online dashboard.
 
 2. Implement a solution to enhance the application logs to provide more useful performance and application behavior details, specifically around browser metrics and application dependencies. Discuss which visualization, or dashboard, options exist for the log results. Existing App Service logs already cover these topics:
 
-    - **Detailed Error Logging**---detailed error information for HTTP status codes that indicate a failure (status code 400 or greater).
+   - **Detailed Error Logging**---detailed error information for HTTP status codes that indicate a failure (status code 400 or greater).
 
-    - **Failed Request Tracing**---detailed information on failed requests, including a trace of the Internet Information Server IIS components used to process the request and the time taken in each component.
+   - **Failed Request Tracing**---detailed information on failed requests, including a trace of the Internet Information Server IIS components used to process the request and the time taken in each component.
 
-    - **Web Server Logging**---information about HTTP transactions using the W3C extended log file format.
+   - **Web Server Logging**---information about HTTP transactions using the W3C extended log file format.
 
-    - **Application Diagnostics**---trace messages as defined in the source code.
+   - **Application Diagnostics**---trace messages as defined in the source code.
 
-    - **Deployment Logs**
+   - **Deployment Logs**
 
 **Prepare**
 
@@ -212,13 +212,13 @@ Directions: Reconvene with the larger group to hear the facilitator/SME share th
 
 ## Additional references
 
-|    |            |
-|----------|:-------------:|
-| **Description** | **Links** |
-| Enable diagnostics logging for web apps | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/> |
-| Monitor web app performance  | <https://azure.microsoft.com/en-us/documentation/articles/insights-perf-analytics/> |
-| Azure Pipelines | <https://azure.microsoft.com/en-us/services/devops/pipelines/> |
+|                                           |                                                                                                                        |
+| ----------------------------------------- | :--------------------------------------------------------------------------------------------------------------------: |
+| **Description**                           |                                                       **Links**                                                        |
+| Enable diagnostics logging for web apps   |              <https://azure.microsoft.com/en-us/documentation/articles/web-sites-enable-diagnostic-log/>               |
+| Monitor web app performance               |                  <https://azure.microsoft.com/en-us/documentation/articles/insights-perf-analytics/>                   |
+| Azure Pipelines                           |                             <https://azure.microsoft.com/en-us/services/devops/pipelines/>                             |
 | Switch deployment slots in Azure web apps | <https://blogs.msdn.microsoft.com/devops/2017/04/10/considerations-on-using-deployment-slots-in-your-devops-pipeline/> |
-| App service continuous deployment | <https://docs.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment/> |
-| App service staging environments | <https://azure.microsoft.com/en-us/documentation/articles/web-sites-staged-publishing/> |
-| Application Insights | <https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview/> |
+| App service continuous deployment         |                   <https://docs.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment/>                   |
+| App service staging environments          |                <https://azure.microsoft.com/en-us/documentation/articles/web-sites-staged-publishing/>                 |
+| Application Insights                      |                   <https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview/>                    |
