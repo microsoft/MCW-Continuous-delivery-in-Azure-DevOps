@@ -41,8 +41,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 You should follow all steps in this document _before_ performing the Hands-on lab. Pay close attention to product versions, as the version numbers called out in the lab have been tested and shown successful for the lab.
 
-> **Note**: If the students need to use Microsoft-hosted Azure Pipelines Agents, [Task 4: Create Azure DevOps Project](#task--4-create-azure-devops-project) will need to be completed at least **2-3 business days** before the lab in order to run parallel jobs in Azure DevOps. The other option is to use self-hosted agents. If you need to go the self-hosted route, refer to the [Azure Pipelines Agents documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=browser).
-
 ## Requirements
 
 1. Microsoft Azure subscription must be pay-as-you-go or MSDN.
@@ -200,49 +198,3 @@ In this task, you will set up a project in Azure DevOps to be used with the sect
      - **Work item process**: `Basic`
 
    - Select the **Create project** button.
-
-2. To complete Exercise 3: Task 3 in the Hands on Lab, the student will need to request a free grant of parallel jobs in Azure Pipelines via [this form](https://aka.ms/azpipelines-parallelism-request). More information can be found [here regarding changes in Azure Pipelines Grant for Public Projects](https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-public-projects/).
-
-   > **Note**: The Azure DevOps Parallelism Request can take 2-3 business days to process the request.
-
-You should follow all steps provided _before_ performing the Hands-on lab.
-
-### Task 5: Connect Azure Board with GitHub
-
-We can automate our project tracking with the Azure Board integration for GitHub. In this task, you will connect your Azure DevOps project's board to your GitHub repository.
-
-1. On the GitHub Marketplace, find the [Azure Boards Integration App](https://github.com/marketplace/azure-boards).
-
-   ![The Azure Boards Integration App on GitHub Marketplace that will provide a link between Azure DevOps Boards and GitHub issues.](media/hol-ex1-task1-step1.png "Azure Boards Integration App on GitHub Marketplace")
-
-2. Scroll to the bottom of the page and select `Install it for Free`.
-
-3. On the next page, select `Complete order and begin installation`.
-
-4. Select the lab files repository created in [Task 1 of the Before the HOL Instructions](Before%20the%20HOL%20-%20Continuous%20delivery%20in%20Azure%20DevOps.md#task-1-create-the-project-repo) and select `Install & Authorize`.
-
-   ![The GitHub Application Authorization page.](media/hol-ex1-task1-step4-1.png "GitHub Application Authorization")
-
-5. Select the Azure DevOps organization you signed into or created in the Before Hands-On Lab setup guide and select the Fabrikam project.
-
-   ![The Azure DevOps Integration Configuration form.](media/hol-ex1-task1-step5-1.png "Azure DevOps Integration Configuration")
-
-6. When the integration succeeds, you will be taken to the Azure DevOps Board. Follow the directions in the onboarding tutorial to create an initial Issue in the `To Do` Column and create a pull request associated with your Issue.
-
-   ![After completion of the onboarding tutorial. Two todo confirmation messages displayed.](media/hol-ex1-task1-step6-1.png "Get started and quick tip")
-
-7. Open the new Issue that the onboarding tutorial creates within Azure DevOps and observe the GitHub pull request and comment that are linked to the Azure DevOps board Issue.
-
-   ![Linked GitHub items in an Azure DevOps issue in Boards.](media/hol-ex1-task1-step7-1.png "GitHub Pull Request and Comment")
-
-8. In GitHub, browse to the `Pull Requests` tab of the lab files repository created in [Task 1 of the Before the HOL Instructions](Before%20the%20HOL%20-%20Continuous%20delivery%20in%20Azure%20DevOps.md#task-1-create-the-project-repo) and open the pull request that was created in the onboarding tutorial for the Azure Boards Integration App. Note the `AB#1` annotation in the pull request comments - this annotation signals to Azure DevOps that this pull request comment should be linked to Issue #1 in Azure Boards.
-
-   ![Pull request detail in GitHub created by onboarding tutorial in previous steps.](media/hol-ex1-task1-step8-1.png "Pull Request detail")
-
-9. Select the `Files changed` tab within the pull request detail and observe the change to the README.md associated with this pull request. After reviewing the changes, go back to the `Conversation` tab. Select the `Merge pull request` button and confirm the following prompt to merge the pull request into the `main` branch.
-
-   ![The file changes associated with the pull request.](media/hol-ex1-task1-step9-1.png "Pull Request Files Changed tab")
-
-10. In Azure DevOps Boards, find the work item and observe that the issue has been moved to the `Done` column on completion of the pull request.
-
-    ![A work item with a linked GitHub commit illustrating the link between Azure DevOps Boards and GitHub issues.](media/hol-ex1-task1-step10-1.png "Work Item with a Linked GitHub Commit")
