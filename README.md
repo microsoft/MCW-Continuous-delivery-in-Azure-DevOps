@@ -1,9 +1,6 @@
-# Retirement notice
-This workshop will be retired effective July 30, 2022. At that time the repository will be archived, and the materials will not be maintained.
-
-For questions or concerns regarding the MCW library, email us at [AskMCW](mailto:AskMCW@microsoft.com). Please remember to include the title of the workshop in your email.
-
 # Continuous delivery in Azure DevOps
+
+## This workshop is archived and no longer being maintained.  Content is read-only.
 
 Fabrikam Medical Conferences provides conference web site services tailored to the medical community. They started out 10 years ago building a few conference sites for a small conference organizer. Since then, word of mouth has spread, and Fabrikam MedicalConferences is now a well-known industry brand. They currently handle over 100 conferences per year and growing.
 
